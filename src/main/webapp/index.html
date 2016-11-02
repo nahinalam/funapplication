@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+
+<HEAD>
+    <TITLE>Cast Your Ballot</TITLE>
+    <META http-equiv=content-type content="text/html; charset=UTF-8">
+    <STYLE>
+		#footer {
+            width: 100%;
+            bottom: 0;
+			position: relative;
+        }
+		
+        BODY {
+            FONT-FAMILY: arial, sans-serif
+        }
+        
+        TD {
+            FONT-FAMILY: arial, sans-serif
+        }
+        
+        A {
+            FONT-FAMILY: arial, sans-serif
+        }
+        
+        P {
+            FONT-FAMILY: arial, sans-serif
+        }
+        
+        .h {
+            FONT-FAMILY: arial, sans-serif
+        }
+        
+        .h {
+            FONT-SIZE: 20px
+        }
+        
+        .q {
+            COLOR: #0000cc
+        }
+    </STYLE>
+
+    <META content="MSHTML 6.00.2719.2200" name=GENERATOR>
+</HEAD>
+
+<BODY text=#000000 vLink=#551a8b aLink=#ff0000 link=#0000cc bgColor=#ffffff > <!-- onload=sf()> -->
+
+    <CENTER>
+
+        <TABLE cellSpacing=0 cellPadding=0 border=0>
+
+            <TBODY>
+
+                <TR>
+
+                    <TD>
+                        <IMG height=110 alt= 'Cast Your Ballot' src="" width=276>
+                    </TD>
+                </TR>
+            </TBODY>
+        </TABLE>
+        <BR>
+
+        <FORM id = "voter" name= "voter" method = "get" action="voterServlet" role="form">
+
+            <TABLE cellSpacing=0 cellPadding=0>
+
+                <TBODY>
+
+                    <TR>
+
+                        <TD width=75>&nbsp;</TD>
+
+                        <TD align=middle>
+                            <INPUT type=hidden value=en name=hl>
+                            <SPAN id=hf></SPAN>
+                            <INPUT type=hidden value=UTF-8 name=ie>
+                            <INPUT type=hidden value=UTF-8 name=oe>
+                            <!--  maxLength=256 size=55 name=q>-->
+                            <INPUT type="voterid" name="voterid" id= "voterid" placeholder="voterid" maxLength=256 size=55 required>
+                            <BR>
+                            <button id = "submit" type="submit">submit</button>  
+                            <button onclick = "clear()">clear</button>             
+                        </TD>
+                    </TR>
+                </TBODY>
+            </TABLE>
+        </FORM>
+        <BR>
+        <BR>
+    </CENTER>
+    <div id ="footer"></div>
+    <SCRIPT src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+    alert('heloo');
+    $(document).ready(function(){
+        $("#footer").load("footer.html");
+    }); 
+    function clear(){
+    	document.getElementById("voterid").reset();	
+    }
+    </SCRIPT>
+</BODY>
+
+</HTML>
